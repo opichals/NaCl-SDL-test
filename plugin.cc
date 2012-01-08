@@ -55,8 +55,8 @@ class PluginInstance : public pp::Instance {
     }
   }
 
-  bool HandleInputEvent(const PP_InputEvent& event) {
-    SDL_NACL_PushEvent(&event);
+  bool HandleInputEvent(pp::InputEvent& event) {
+    SDL_NACL_PushEvent(event);
     return true;
   }
 
